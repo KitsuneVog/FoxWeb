@@ -1,11 +1,11 @@
 <html>
   <head>
-    <title>Страница с примером кода JavaScript</title>
-    <script>
-      alert("Hello World!");
-    </script>
+    <title>Страница с примером кода</title>
+
+
+
   </head>
   <body>
-    Это текст основной страницы
+    <h1>Это текст основной страницы</h1>
   </body>
 </html>
