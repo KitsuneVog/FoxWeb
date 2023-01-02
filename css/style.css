@@ -8,9 +8,15 @@ ul{
 	padding: 20px;
 }
 
+li{
+	display: inline;
+	font-size: 25px;
+	color: #293133;
+}
+
 a{
-	font-size: 40px;
-	padding: 20px;
+	font-size: 25px;
+	padding: 16px;
 	color: #293133;
 	text-decoration: none;
 }
@@ -18,8 +24,4 @@ a{
 a:hover{
 	color: #9932CC;
 	text-decoration: none;
-}
-
-li{
-	display: inline;
 }
