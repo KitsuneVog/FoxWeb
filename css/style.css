@@ -1,27 +1,66 @@
-header{
-	background: linear-gradient(#C0C0C0, #DCDCDC);
+body {
+	margin: none;
+	font-size: 15px;
+	line-height: 1.6px;
+	color: #333;
 }
 
-ul{
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.intro {
+	width: 100%;
+	height: 100vh;
+
+	background: url("/image/intro.jpg") center no-repeat;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+	background: linear-gradient(#C0C0C0, #DCDCDC);
+
+}
+
+ul {
 	list-style: none;
 	margin: 0;
 	padding: 20px;
 }
 
-li{
+li {
 	display: inline;
-	font-size: 25px;
-	color: #293133;
 }
 
-a{
-	font-size: 25px;
+a {
 	padding: 16px;
-	color: #293133;
 	text-decoration: none;
+	color: #FFFFFF;
 }
 
-a:hover{
+a:hover {
 	color: #9932CC;
-	text-decoration: none;
 }
