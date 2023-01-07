@@ -1,1 +1,1 @@
-https://kitsunevog.github.io/FoxWebsite
+https://kitsunevog.github.io/FoxWeb
