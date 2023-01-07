@@ -1,6 +1,6 @@
 {
-    "name": "FoxWebsite",
-    "short_name": "FoxWebsite",
+    "name": "FoxWeb",
+    "short_name": "FoxWeb",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
