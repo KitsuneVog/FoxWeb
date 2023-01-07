@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
+/* Intro */
+
 .intro {
 	display: flex;
 	flex-direction: column;
@@ -35,14 +37,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro__inner {
 	width: 100%;
-	max-width: 645px;
+	max-width: 650px;
 	margin: 0 auto;
 
 	text-align: center;
+
+  	text-shadow:0 0 42px rgb(0, 0, 0)
 }
 
 .intro__suptitle {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 
 	font-family: 'Kaushan Script', cursive;
 	font-size: 65px;
@@ -51,12 +55,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro__title {
 	color: #fff;
-	font-size: 90px;
+	font-size: 100px;
 	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 1;
-
-
 }
 
 .intro__title:after {
@@ -68,6 +70,8 @@ h1, h2, h3, h4, h5, h6 {
 
 	background-color: #fff;
 }
+
+/* Header */
 
 .header {
 	width: 100%;
@@ -88,8 +92,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__logo {
 	font-size: 30px;
-	font-weight: 700;
 	color: #FFF;
+	font-weight: 700;
 }
 
 .nav {
@@ -104,10 +108,11 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 
 	color: #FFF;
+	opacity: .75;
 	font-weight: 700;
 	text-decoration: none;
 
-	transition: color .1s linear;
+	transition: opacity .1s linear;
 }
 
 .nav__link:after {
@@ -116,19 +121,19 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	height: 3px;
 
-	background-color: #fce38a;
-	opacity: 0;
-
 	position: absolute;
 	top: 100%;
 	left: 0;
 	z-index: 1;
 
-	transition: opacity .1s;
+	background-color: #fff;
+	opacity: 0;
+
+	transition: opacity .1s linear;
 }
 
 .nav__link:hover {
-	color: #fce38a;
+	opacity: 1;
 }
 
 .nav__link:hover:after {
