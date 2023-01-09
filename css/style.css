@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	height: 100vh;
 
-	background: url("../images/intro.jpg") center no-repeat;
+	background: #100931 url("../images/intro.jpg") center no-repeat;
 	background-size: cover;
 }
 
