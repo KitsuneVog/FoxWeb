@@ -112,7 +112,7 @@ p {
 
 .intro__inner {
     width: 100%;
-	max-width: 650px;
+	max-width: 670px;
 	margin: 0 auto;
 
   	text-shadow:0 0 42px rgb(0, 0, 0);
@@ -180,40 +180,45 @@ p {
 
 .feature__item {
     width: 33.33%;
-    padding: 0 40px;
+    padding: 0 45px;
     margin: 25px 0;
 
     text-align: center;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .feature__icon {
+    width: 100%;
+    height: auto;
     margin-bottom: 25px;
 }
 
 .feature__title {
     margin-bottom: 20px;
 
-    font-size: 14px;
+    font-size: 22px;
     color: #2d3033;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .feature__text {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.5;
     color: #6c7279;
 }
 
 /* Works */
-.works {
+.team {
     display: flex;
     flex-wrap: wrap;
 }
 
-.works__item {
+.team__item {
     width: 25%;
-    height: 350px;
+    height: 540px;
 
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
@@ -222,16 +227,16 @@ p {
     overflow: hidden;
 }
 
-.works__photo {
+.team__photo {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     z-index: 1;
 
     transform: translate3d(-50%, -50%, 0);
 }
 
-.works__content {
+.team__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,25 +256,24 @@ p {
     transition: opacity .2s linear;
 }
 
-.works__item:hover .works__content{
+.team__item:hover .team__content{
     opacity: 1;
 }
 
-.works__title {
+.team__title {
     margin-bottom: 5px;
 
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 700;
     color: #fff;
-    text-transform: uppercase;
 }
 
-.works__text {
-    font-size: 14px;
+.team__text {
+    font-size: 16px;
     color: #fff;
 }
 
-/* Team */
+/* 
 .team {
     margin: 100px 0 70px;
 }
@@ -314,7 +318,7 @@ p {
     font-size: 14px;
     line-height: 1.5;
     color: #6c7279;
-}
+} */
 
 /* Socila */
 .social {
