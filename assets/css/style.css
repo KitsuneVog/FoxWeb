@@ -31,6 +31,16 @@ p {
     padding: 0 15px;
 }
 
+.chapter__title {
+    text-align: center;
+    margin-bottom: 15px;
+
+    font-size: 35px;
+    background: linear-gradient(90deg, #a84bb9, #3a4fee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Header */
 .header {
     width: 100%;
@@ -109,7 +119,8 @@ p {
     width: 100%;
 	height: 100vh;
 
-    background: #100931 url(../../images/intro.jpg) no-repeat center / cover;
+    background: #100931 url(../../images/intro.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .intro__inner {
@@ -221,6 +232,20 @@ p {
     color: #6c7279;
 }
 
+/* Dynmap */
+.dynmap {
+    display: block;
+    padding: 0 70px;
+}
+
+.dynmap__map {
+    width: 100%;
+    height: 85vh;
+    margin-bottom: 60px;
+
+    border: 1px solid #000;
+}
+
 /* Works */
 .team {
     display: flex;
@@ -284,58 +309,17 @@ p {
     color: #fff;
 }
 
-/* 
-.team {
-    margin: 100px 0 70px;
-}
-
-.team__inner {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-.team__item {
-    width: 25%;
-    padding: 0 15px;
-    margin-bottom: 30px;
-}
-
-.team__photo {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.team__name {
-    margin-bottom: 8px;
-
-    font-size: 22px;
-    color: #2d3033;
-}
-
-.team__prof {
-    margin-bottom: 15px;
-
-    font-size: 13px;
-    color: #e84545;
-    text-transform: uppercase;
-}
-
-.team__text {
-    margin-bottom: 20px;
-
-    font-size: 14px;
-    line-height: 1.5;
-    color: #6c7279;
-} */
-
 /* Socila */
 .social {
-    position: absolute;
     display: flex;
+}
 
+.social--footer {
+    justify-content: center;
+}
+
+.social__inner {
+    position: absolute;
     left: 5px;
     top: 5px;
     z-index: 2;
@@ -363,8 +347,24 @@ p {
 }
 
 .social__item:hover .social__icon {
+    fill: #000;
+    opacity: 1;
+}
+
+.team__item .social__item:hover .social__icon {
     fill: #7248b2;
     opacity: 1;
+}
+
+.social--footer .social__item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social__item:hover {
+    background-color: #fff;
 }
 
 .social__icon {
@@ -373,4 +373,42 @@ p {
     fill: #000;
 
     transition: fill .1s linear;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
+}
+
+/* Footer */
+.footer {
+    padding: 55px 0;
+
+    background-color: #100931;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__item {
+    width: 33.33%;
+    padding: 0 15px;
+
+    text-align: center;
+}
+
+.footer__title {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .5);
 }

@@ -4,8 +4,10 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Kaushan+Script&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="http://fontstruct.com/fontstructors/z2deker" rel="stylesheet">
+    <link href="http://65.21.193.246:7031" rel="stylesheet">
     
 
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
@@ -23,9 +25,15 @@
 <!-- Sprite -->
 <svg style="display: none">
 
-    <symbol id="Twitch" viewBox="0 0 32 32">
+    <symbol id="twitch" viewBox="0 0 32 32">
         <g>
             <path d="M2.787 0l-2.089 5.568v22.255h7.652v4.177h4.177l4.167-4.177h6.26l8.349-8.344v-19.479zM5.568 2.781h22.953v15.301l-4.871 4.871h-7.651l-4.172 4.172v-4.172h-6.26zM13.219 16.697h2.781v-8.348h-2.781zM20.864 16.697h2.781v-8.348h-2.781z"/>
+        </g>
+    </symbol>
+
+    <symbol id="discord" viewBox="-1.5 0 24 24">
+        <g>
+            <path d="m13.93 11.4c-.054.633-.582 1.127-1.224 1.127-.678 0-1.229-.55-1.229-1.229s.55-1.229 1.228-1.229c.683.029 1.225.59 1.225 1.277 0 .019 0 .037-.001.056v-.003zm-5.604-1.33c-.688.061-1.223.634-1.223 1.332s.535 1.271 1.218 1.332h.005c.683-.029 1.225-.59 1.225-1.277 0-.019 0-.037-.001-.056v.003c.001-.02.002-.043.002-.067 0-.685-.541-1.243-1.219-1.269h-.002zm12.674-7.598v21.528c-3.023-2.672-2.057-1.787-5.568-5.052l.636 2.22h-13.609c-1.359-.004-2.46-1.106-2.46-2.466 0-.002 0-.004 0-.006v-16.224c0-.002 0-.004 0-.006 0-1.36 1.101-2.462 2.459-2.466h16.081c1.359.004 2.46 1.106 2.46 2.466v.006zm-3.42 11.376c-.042-2.559-.676-4.96-1.77-7.086l.042.09c-.924-.731-2.088-1.195-3.358-1.259l-.014-.001-.168.192c1.15.312 2.15.837 3.002 1.535l-.014-.011c-1.399-.769-3.066-1.222-4.839-1.222-1.493 0-2.911.321-4.189.898l.064-.026c-.444.204-.708.35-.708.35.884-.722 1.942-1.266 3.1-1.56l.056-.012-.12-.144c-1.284.065-2.448.529-3.384 1.269l.012-.009c-1.052 2.036-1.686 4.437-1.728 6.982v.014c.799 1.111 2.088 1.826 3.543 1.826.041 0 .082-.001.123-.002h-.006s.444-.54.804-.996c-.866-.223-1.592-.727-2.093-1.406l-.007-.01c.176.124.468.284.49.3 1.209.672 2.652 1.067 4.188 1.067 1.191 0 2.326-.238 3.36-.668l-.058.021c.528-.202.982-.44 1.404-.723l-.025.016c-.526.703-1.277 1.212-2.144 1.423l-.026.005c.36.456.792.972.792.972.033.001.072.001.111.001 1.461 0 2.755-.714 3.552-1.813l.009-.013z"/>
         </g>
     </symbol>
 
@@ -40,8 +48,8 @@
                 <a class="nav__link" href="#">О сервере</a>
                 <a class="nav__link" href="#">Правила</a>
                 <a class="nav__link" href="#">Связь</a>
-                <a class="nav__link" href="#">Карта мира</a>
-                <a class="nav__link" href="#">Играть</a>
+                <a class="nav__link" href="#dynmap">Карта мира</a>
+                <a class="nav__link" onclick="copyIP()" href="#">Играть</a>
             </nav>
         </div>
     </div>
@@ -107,8 +115,17 @@
     </div><!--/.Feature-->
 </div><!--/.container-->
 
-<!-- Works -->
+<!-- Dynmap -->
+<div class="container">
+    <div class="dynmap">
+        <h3 class="chapter__title" id="dynmap">Карта мира</h3>
+        <iframe class="dynmap__map" src="http://65.21.193.246:7031"></iframe>
+    </div>
+</div>
+
+<!-- Team -->
 <div class="team">
+
     <div class="team__item">
         <img
             class="team__photo"
@@ -117,15 +134,21 @@
         />
         <div class="team__content">
             <div class="team__title">KunovLex</div>
-            <div class="team__text">Создатель сервера<br>Стример</div>
+            <div class="team__text">
+                <div>Создатель сервера</div>
+                <div>Стример</div>
+            </div>
         </div>
         <div class="social">
-            <a class="social__item" href="https://www.twitch.tv/kunovlex" target="_blank">
-                <svg class="social__icon">
-                    <use xlink:href="#Twitch"></use>
-                </svg>
-            </a>
+            <div class="social__inner">
 
+                <a class="social__item" href="https://www.twitch.tv/kunovlex" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#twitch"></use>
+                    </svg>
+                </a>
+
+            </div>
         </div>
     </div>
 
@@ -137,190 +160,56 @@
         />
         <div class="team__content">
             <div class="team__title">KitsuneVog</div>
-            <div class="team__text">Админ Discord<br>Стример</div>
+            <div class="team__text">
+                <div>Админ Discord</div>
+                <div>Стример</div>
+            </div>
         </div>
         <div class="social">
-            <a class="social__item" href="https://www.twitch.tv/kitsunevog" target="_blank">
-                <svg class="social__icon">
-                    <use xlink:href="#Twitch"></use>
-                </svg>
-            </a>
+            <div class="social__inner">
 
+                <a class="social__item" href="https://www.twitch.tv/kitsunevog" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#twitch"></use>
+                    </svg>
+                </a>
+
+            </div>
         </div>
-        
     </div>
 
 </div><!-- /.Works -->
 
-<!-- 
-<div class="team">
+<!-- Footer -->
+<footer class="footer">
     <div class="container">
-        <div class="team__inner">
-            <div class="team__item">
-                <img
-                    class="team__photo"
-                    src="/images/team/team-1.jpg"
-                    alt=""
-                />
-                <div class="team__name">Ruth Woods</div>
-                <div class="team__prof">Founder, CEO</div>
-                <div class="team__text">
-                    <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa
-                        justo sit amet risus.
-                    </p>
-                    <p>
-                        Maecenas sed diam eget risus varius blandit sit
-                        amet non magna. Nullam quis risus eget urna
-                        mollis ornare vel eu leo.
-                    </p>
-                </div>
-                <div class="social">
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
+        <div class="footer__inner">
 
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
+            <div class="footer__item">
+                <h4 class="footer__title">Авторы</h4>
+                <div class="footer__text">KunovLex</div>
+                <div class="footer__text">KitsuneVog</div>
+            </div>
 
-                    <a class="social__item" href="#" target="_blank">
+            <div class="footer__item">
+                <h4 class="footer__title">Ссылки</h4>
+                <div class="social social--footer">
+                    <a class="social__item" href="https://discord.gg/w85ukDE2pJ" target="_blank">
                         <svg class="social__icon">
-                            <use xlink:href="#vk"></use>
+                            <use xlink:href="#discord"></use>
                         </svg>
                     </a>
                 </div>
             </div>
 
-            <div class="team__item">
-                <img
-                    class="team__photo"
-                    src="/images/team/team-2.jpg"
-                    alt=""
-                />
-                <div class="team__name">Timothy Reed</div>
-                <div class="team__prof">Co-Founder, Developer</div>
-                <div class="team__text">
-                    <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa
-                        justo sit amet risus.
-                    </p>
-                    <p>
-                        Maecenas sed diam eget risus varius blandit sit
-                        amet non magna. Nullam quis risus eget urna
-                        mollis ornare vel eu leo.
-                    </p>
-                </div>
-                <div class="social">
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#vk"></use>
-                        </svg>
-                    </a>
-                </div>
+            <div class="footer__item">
+                <h4 class="footer__title">О VibeCraft</h4>
+                <div class="footer__text">В первую очередь это дружный сервер</div>
             </div>
 
-            <div class="team__item">
-                <img
-                    class="team__photo"
-                    src="/images/team/team-3.jpg"
-                    alt=""
-                />
-                <div class="team__name">Victoria Valdez</div>
-                <div class="team__prof">UI Designer</div>
-                <div class="team__text">
-                    <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa
-                        justo sit amet risus.
-                    </p>
-                    <p>
-                        Maecenas sed diam eget risus varius blandit sit
-                        amet non magna. Nullam quis risus eget urna
-                        mollis ornare vel eu leo.
-                    </p>
-                </div>
-                <div class="social">
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
+        </div><!-- /.footer__inner -->
+    </div><!-- /.container -->
+</footer>
 
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#vk"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="team__item">
-                <img
-                    class="team__photo"
-                    src="/images/team/team-4.jpg"
-                    alt=""
-                />
-                <div class="team__name">Beverly Little</div>
-                <div class="team__prof">Data Scientist</div>
-                <div class="team__text">
-                    <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa
-                        justo sit amet risus.
-                    </p>
-                    <p>
-                        Maecenas sed diam eget risus varius blandit sit
-                        amet non magna. Nullam quis risus eget urna
-                        mollis ornare vel eu leo.
-                    </p>
-                </div>
-                <div class="social">
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social__item" href="#" target="_blank">
-                        <svg class="social__icon">
-                            <use xlink:href="#vk"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
 </body>
 </html>
