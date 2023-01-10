@@ -10,8 +10,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -87,7 +87,7 @@ p {
 	transition: opacity .1s linear;
 }
 
-.nav__link:after {
+.nav__link::after {
 	content: "";
 	display: block;
 	width: 100%;
@@ -108,7 +108,7 @@ p {
 	opacity: 1;
 }
 
-.nav__link:hover:after {
+.nav__link:hover::after {
 	opacity: 1;
 }
 
@@ -145,8 +145,8 @@ p {
 .intro__title {
     margin-bottom: 30px;
 
-    font-family: 'Minecraft Title Cyrillic';
-    font-size: 75px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120px;
     line-height: 1.1;
     color: #fff;
     font-weight: 700;
@@ -154,7 +154,7 @@ p {
     line-height: 1;
 }
 
-.intro__title:after {
+.intro__title::after {
 	content: "";
 	display: block;
 	width: 60px;
@@ -417,6 +417,47 @@ p {
 /* Burger */
 .burger {
     display: none;
+    padding: 9px 2px;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item::before,
+.burger__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.burger__item::before {
+    width: 25px;
+    top: -8px;
+}
+
+.burger__item::after {
+    width: 28px;
+    bottom: -8px;
 }
 
 /* Media */
@@ -450,20 +491,20 @@ p {
     
     /* Intro */
     .intro__suptitle {
-        font-size: 35px;
-    }
-
-    .intro__title {
         font-size: 45px;
     }
 
+    .intro__title {
+        font-size: 75px;
+    }
+
     .btn {
         margin-bottom: 40px;
         font-size: 20px;
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 450px) {
     /* Header */
     .header__logo {
         font-size: 15px;
@@ -471,20 +512,36 @@ p {
     
     /* Intro */
     .intro__suptitle {
-        font-size: 20px;
-    }
-
-    .intro__title {
         font-size: 30px;
     }
 
+    .intro__title {
+        font-size: 50px;
+    }
+
     .btn {
         margin-bottom: 40px;
         font-size: 15px;
     }
+
+    /* Burger */
+    .burger__item {
+        width: 20px;
+        height: 2px;
+    }
+ 
+    .burger__item::before {
+        width: 15px;
+        top: -6px;
+    }
+    
+    .burger__item::after {
+        width: 18px;
+        bottom: -6px;
+    }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 310px) {
     /* Header */
     .header__logo {
         font-size: 10px;
@@ -492,15 +549,33 @@ p {
     
     /* Intro */
     .intro__suptitle {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     .intro__title {
-        font-size: 25px;
+        font-size: 40px;
     }
 
     .btn {
         margin-bottom: 40px;
         font-size: 10px;
+    }
+
+    /* Burger */
+    .burger__item {
+        width: 15px;
+        height: 3px;
+
+        height: 1px;
+    }
+ 
+    .burger__item::before {
+        width: 10px;
+        top: -4px;
+    }
+    
+    .burger__item::after {
+        width: 13px;
+        bottom: -4px;
     }
 }
