@@ -50,8 +50,20 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000px;
+    z-index: 1000;
 
+}
+
+.header.fixed {
+    position: fixed;
+    padding-top: 0px;
+
+    background: #100931;
+}
+
+.header.fixed .header__inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .header__inner {
@@ -382,14 +394,14 @@ p {
 
 /* Footer */
 .footer {
-    padding: 55px 0;
-
     background-color: #100931;
 }
 
 .footer__inner {
     display: flex;
     flex-wrap: wrap;
+
+    padding: 45px 0;
 }
 
 .footer__item {
@@ -487,7 +499,12 @@ p {
 
     .btn {
         margin-bottom: 40px;
-        font-size: 50px;
+        font-size: 30px;
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding: 25px 0;
     }
 }
 
@@ -504,6 +521,10 @@ p {
 
     .intro__title {
         font-size: 75px;
+    }
+
+    .intro__title::after {
+        margin: 25px auto;
     }
 
     .btn {
@@ -523,34 +544,52 @@ p {
 }
 
 @media (max-width: 770px) {
+    /* Intro */
+    .intro__title::after {
+        margin: 25px auto;
+    }
+
+    .btn {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    
     /* Feature */
     .feature__item {
         width: 100%;
     }
 
+    .feature__icon {
+        max-width: 300px;
+    }
+
     /* Team */
     .team__item {
         width: 33.33%;
+        max-height: 100vh;
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding: 20px 0;
+    }
+    
+    .footer__item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer__item:last-child {
+        margin-bottom: 0;
     }
 }
 
 @media (max-width: 450px) {
     /* Header */
     .header__logo {
-        font-size: 15px;
-    }
-    
-    /* Intro */
-    .intro__suptitle {
-        font-size: 30px;
-    }
-
-    .intro__title {
-        font-size: 50px;
-    }
-
-    .btn {
-        margin-bottom: 40px;
         font-size: 15px;
     }
 
@@ -569,35 +608,40 @@ p {
         width: 18px;
         bottom: -6px;
     }
+    
+    /* Intro */
+    .intro__suptitle {
+        font-size: 30px;
+    }
 
-    /* Footer */
-    .footer__item {
-        padding: 0 10px;
+    .intro__title {
+        font-size: 50px;
+    }
+
+    .btn {
+        margin-bottom: 40px;
+        font-size: 15px;
     }
 
     /* Team */
     .team__item {
         width: 50%;
     }
+
+    /* Footer */
+    .footer__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer__title {
+        margin-bottom: 5px;
+    }
 }
 
 @media (max-width: 310px) {
     /* Header */
     .header__logo {
-        font-size: 10px;
-    }
-    
-    /* Intro */
-    .intro__suptitle {
-        font-size: 25px;
-    }
-
-    .intro__title {
-        font-size: 40px;
-    }
-
-    .btn {
-        margin-bottom: 40px;
         font-size: 10px;
     }
 
@@ -618,15 +662,35 @@ p {
         width: 13px;
         bottom: -4px;
     }
+    
+    /* Intro */
+    .intro__suptitle {
+        font-size: 25px;
+    }
 
-    /* Footer */
-    .footer__item {
-        width: 100%;
-        margin-bottom: 15px;
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .btn {
+        margin-bottom: 40px;
+        font-size: 10px;
     }
 
     /* Team */
     .team__item {
         width: 100%;
+    }
+}
+
+@media (max-height: 380px) {
+    /* Header */
+    .header {
+        padding-top: 15px;
+    }
+    
+    /* Intro */
+    .intro {
+        padding-top: 60px;
     }
 }

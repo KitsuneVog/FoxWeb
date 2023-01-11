@@ -2,14 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Kaushan+Script&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link href="http://65.21.193.246:7031" rel="stylesheet">
     
-
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
@@ -19,6 +17,8 @@
     <meta name="theme-color" content="#008bff">
 
     <title>VibeCraft - Дружный | ванильный | позитивный</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 </svg>
 
 <!-- Header -->
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">VibeCraft</div>
@@ -49,6 +49,7 @@
                 <a class="nav__link" href="#">Правила</a>
                 <a class="nav__link" href="#">Связь</a>
                 <a class="nav__link" href="#dynmap">Карта мира</a>
+                <a class="nav__link" href="#">Моды</a>
                 <a class="nav__link" onclick="copyIP()" href="#">Играть</a>
             </nav>
 
@@ -61,7 +62,7 @@
 </header>
 
 <!-- Intro -->
-<div class="intro">
+<div class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
 
@@ -215,6 +216,9 @@
         </div><!-- /.footer__inner -->
     </div><!-- /.container -->
 </footer>
+
+<!-- Javascript -->
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
