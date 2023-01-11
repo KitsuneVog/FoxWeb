@@ -51,7 +51,6 @@ p {
     left: 0;
     right: 0;
     z-index: 1000;
-
 }
 
 .header.fixed {
@@ -75,8 +74,9 @@ p {
 
 .header__logo {
     font-size: 40px;
-	color: #FFF;
+    color: #FFF;
 	font-weight: 700;
+    text-decoration: none;
 }
 
 /* Nav */
