@@ -33,9 +33,9 @@ p {
 
 .chapter__title {
     text-align: center;
-    margin-bottom: 15px;
+    margin: 15px;
 
-    font-size: 35px;
+    font-size: 45px;
     background: linear-gradient(90deg, #a84bb9, #3a4fee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -131,6 +131,7 @@ p {
     justify-content: center;
     height: 800px;
 	padding-top: 100px;
+    margin-bottom: 25px;
 
     background: #100931 url(../../images/intro.jpg) no-repeat center;
     background-size: cover;
@@ -206,11 +207,27 @@ p {
     color: #333;
 }
 
+/* Hello */
+.hello {
+    display: flex;
+    
+    align-items: center;
+}
+
+.hello__text {
+    width: 70%;
+    padding: 0 45px;
+    margin-top: 25px;
+
+    font-size: 24px;
+    line-height: 1.7;
+}
+
 /* Frature */
 .feature {
     display: flex;
     flex-wrap: wrap;
-    margin: 95px 0;
+    margin-bottom: 95px;
 }
 
 .feature__item {
@@ -472,6 +489,21 @@ p {
     bottom: -8px;
 }
 
+/* Alert */
+.alert {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+
+    font-size: 17px;
+    color: #3c763d;
+    background-color: #dff0d8;
+  }
+
 /* Media */
 @media (max-width: 1500px) {
     /* Dynmap */
@@ -636,6 +668,11 @@ p {
 
     .footer__title {
         margin-bottom: 5px;
+    }
+    
+    /* Alert */
+    .alert {
+        font-size: 12px;
     }
 }
 
