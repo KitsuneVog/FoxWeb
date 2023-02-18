@@ -617,7 +617,7 @@ p {
 @media (max-width: 770px) {
     /* Intro */
     .intro__title::after {
-        margin: 25px auto;
+        margin: 35px auto;
     }
 
     .btn {
@@ -665,7 +665,7 @@ p {
 @media (max-width: 450px) {
     /* Header */
     .header__logo {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     /* Burger */
