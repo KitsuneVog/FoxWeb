@@ -225,8 +225,8 @@ p {
 }
 
 .hello__img {
-    width: auto;
-    max-height: 300px;
+    width: 100%;
+    height: auto;
 
     border-radius: 100%;
 }
@@ -549,9 +549,9 @@ p {
         font-size: 20px;
     }
 
+    /* Hello */
     .hello__img {
-        
-
+        max-width: 400px;
     }
 
     .btn {
@@ -611,7 +611,11 @@ p {
         font-size: 20px;
     }
 
-    
+    /* Hello */
+    .hello__img {
+        max-width: 300px;
+    }
+
     /* Feature */
     .feature__item {
         width: 100%;
