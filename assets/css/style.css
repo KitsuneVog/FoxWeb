@@ -555,7 +555,7 @@ p {
 @media (max-width: 991px) {
     /* Header */
     .header__logo {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     /* Nav */
@@ -665,7 +665,7 @@ p {
 @media (max-width: 450px) {
     /* Header */
     .header__logo {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     /* Burger */
@@ -722,7 +722,7 @@ p {
 @media (max-width: 310px) {
     /* Header */
     .header__logo {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     /* Burger */
