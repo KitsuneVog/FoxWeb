@@ -1,20 +1,57 @@
 $(function() {
 
+	// Fixed Header
 	let header = $("#header");
 	let intro = $("#intro");
-	let introH;
+	let introH = intro.innerHeight();
 	let scrollPos = $(window).scrollTop();
+	let nav = $("#nav")
+	let navToggle = $("#navToggle")
 
-	$(window).on("scroll load resize", function() {
+	checkScroll(scrollPos, introH)
+
+	$(window).on("scroll resize", function() {
     	introH = intro.innerHeight();
     	scrollPos = $(this).scrollTop();
 
-    	if(scrollPos > introH) {
-    	header.addClass("fixed");
-    	} else {
-    	header.removeClass("fixed");
-    	}
-	})
+    	checkScroll(scrollPos, introH)
+	});
+
+	function checkScroll(scrollPos, introH) {
+		if(scrollPos > introH) {
+			header.addClass("fixed");
+		} else {
+			header.removeClass("fixed");
+		}
+	}
+
+	// Smooth scroll
+	$("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+		nav.removeClass("show");
+
+        let elementId = $(this).data('scroll');
+        let elementOffset = $(elementId).offset().top;
+
+		$("html, body").animate({
+			scrollTop: elementOffset - 65
+		}, 700);
+	});
+
+	// Nav Toggle
+	navToggle.on("click", function(event){
+		event.preventDefault();
+
+		nav.toggleClass("show")
+	});
+
+
+
+
+
+
+
 });
 
 function copyIP() {

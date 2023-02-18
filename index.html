@@ -42,17 +42,18 @@
 <header class="header" id="header">
     <div class="container">
         <div class="header__inner">
-            <a class="header__logo" href="#">VibeCraft</a>
-            <nav class="nav">
-                <a class="nav__link" href="#server">О сервере</a>
-                <a class="nav__link" href="#feature">Правила</a>
-                <a class="nav__link" href="#dynmap">Карта мира</a>
-                <a class="nav__link" href="#">Моды</a>
-                <a class="nav__link" href="#footer">Связь</a>
-                <a class="nav__link" href="#">Играть</a>
+
+            <a class="header__logo" href="#" data-scroll="#intro">VibeCraft</a>
+            
+            <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#server">О сервере</a>
+                <a class="nav__link" href="#" data-scroll="#feature">Правила</a>
+                <a class="nav__link" href="#" data-scroll="#dynmap">Карта мира</a>
+                <a class="nav__link" href="#" data-scroll="#footer">Связь</a>
+                <a class="nav__link" href="#" data-scroll="#intro">Играть</a>
             </nav>
 
-            <button class="burger" type="button">
+            <button class="burger" type="button" id="navToggle">
                 <span class="burger__item">Меню</span>
             </button>
 

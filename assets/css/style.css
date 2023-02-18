@@ -81,6 +81,8 @@ p {
 
 /* Nav */
 .nav {
+    display: flex;
+
 	font-size: 15px;
 }
 
@@ -131,7 +133,7 @@ p {
     justify-content: center;
     height: 800px;
 	padding-top: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 67px;
 
     background: #100931 url(../../images/intro.jpg) no-repeat center;
     background-size: cover;
@@ -522,21 +524,6 @@ p {
 
 
 @media (max-width: 1200px) {
-    /* Nav */
-    .nav__link {
-        display: none;
-    }
-
-    /* Bureger */
-    .burger {
-        display: block;
-    }
-
-    /* Intro */
-    .intro {
-        height: auto;
-    }
-
     /* Hello */
     .hello {
         flex-direction: column;
@@ -569,6 +556,33 @@ p {
     /* Header */
     .header__logo {
         font-size: 25px;
+    }
+
+    /* Nav */
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+
+        background: #100931;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
+    }
+
+    /* Bureger */
+    .burger {
+        display: block;
     }
     
     /* Intro */
