@@ -7,6 +7,7 @@ $(function() {
 	let scrollPos = $(window).scrollTop();
 	let nav = $("#nav")
 	let navToggle = $("#navToggle")
+	let IdClick = $("#IdClick")
 
 	checkScroll(scrollPos, introH)
 
@@ -46,6 +47,20 @@ $(function() {
 		nav.toggleClass("show")
 	});
 
+	// copyIP
+	IdClick.on("click", function(event){
+		event.preventDefault();
+
+		navigator.clipboard.writeText('play.vibecraft.ru');
+
+		let div = document.createElement('div');
+
+		div.className = "alert";
+		div.innerHTML = "<b>ip-адрес скопирован!</b> Приятной игры.";
+		document.body.before(div);
+
+		setTimeout(() => div.remove(), 1500);
+	});
 
 
 
@@ -53,15 +68,3 @@ $(function() {
 
 
 });
-
-function copyIP() {
-	navigator.clipboard.writeText('play.vibecraft.ru')
-
-	let div = document.createElement('div');
-
-    div.className = "alert";
-    div.innerHTML = "<b>ip-адрес скопирован!</b> Приятной игры.";
-	document.body.before(div);
-
-	setTimeout(() => div.remove(), 1500);
-  }
