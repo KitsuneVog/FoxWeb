@@ -51,7 +51,7 @@ $(function() {
 	IdClick.on("click", function(event){
 		event.preventDefault();
 
-		navigator.clipboard.writeText('play.vibecraft.ru');
+		navigator.clipboard.writeText('Нету)');
 
 		let div = document.createElement('div');
 
@@ -68,3 +68,15 @@ $(function() {
 
 
 });
+
+function copyIP() {
+	navigator.clipboard.writeText('play.vibecraft.ru')
+
+	let div = document.createElement('div');
+
+    div.className = "alert";
+    div.innerHTML = "<b>ip-адрес скопирован!</b> Приятной игры.";
+	document.body.before(div);
+
+	setTimeout(() => div.remove(), 1500);
+  }
