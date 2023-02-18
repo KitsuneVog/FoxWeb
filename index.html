@@ -6,19 +6,18 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Kaushan+Script&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link href="http://65.21.193.246:7031" rel="stylesheet">
 
     <title>VibeCraft - Дружный | ванильный | позитивный</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2dadef">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#2d89ef">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#2dadef">
+    <meta name="msapplication-TileColor" content="#2dadef">
+    <meta name="theme-color" content="#2dadef">
 </head>
 <body>
 
@@ -45,8 +44,8 @@
         <div class="header__inner">
             <a class="header__logo" href="#">VibeCraft</a>
             <nav class="nav">
-                <a class="nav__link" href="#feature">О сервере</a>
-                <a class="nav__link" href="#rules">Правила</a>
+                <a class="nav__link" href="#server">О сервере</a>
+                <a class="nav__link" href="#feature">Правила</a>
                 <a class="nav__link" href="#dynmap">Карта мира</a>
                 <a class="nav__link" href="#">Моды</a>
                 <a class="nav__link" href="#footer">Связь</a>
@@ -80,11 +79,14 @@
 </div>
 
 <!-- Text -->
-<div class="container">
-    <h3 class="chapter__title" id="feature">Что такое VibeCraft?</h3>
+<div class="container"  id="server">
+    <h3 class="chapter__title">Что такое VibeCraft?</h3>
     <div class="hello">
 
-        <img class="hello__img" src="images/hello.png" alt="">
+        <picture>
+            <source srcset="images/hello.webp" type="image/webp">
+            <img class="hello__img" src="images/hello.png" alt="">
+        </picture>
 
         <p class="hello__text">
             Это ванильный сервер выживания на уровне HARD. Все плагины, которые используются на сервере, не изменяют механику игры. Мы здесь с целью собрать друзей единомышленников, которые хотят хорошо провести время, общаясь друг с другом не только посредством чата, но и через Plasma Voice или по нашему Discord Серверу. Ты с нами? 😉
@@ -94,8 +96,8 @@
 </div>
 
 <!-- Feature  -->
-<div class="container">
-    <h3 class="chapter__title" id="rules">Основные правила</h3>
+<div class="container" id="feature">
+    <h3 class="chapter__title">Основные правила</h3>
     <div class="feature">
         
         <div class="feature__item">
@@ -135,10 +137,10 @@
 </div><!--/.container-->
 
 <!-- Dynmap -->
-<div class="container">
-    <h3 class="chapter__title" id="dynmap">Карта мира</h3>
+<div class="container" id="dynmap">
+    <h3 class="chapter__title">Карта мира</h3>
     <div class="dynmap">
-        <iframe class="dynmap__map" src="http://m1.joinserver.ru:25805"></iframe>
+        <iframe class="dynmap__map" src=""></iframe>
     </div>
 </div>
 

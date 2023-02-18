@@ -216,7 +216,7 @@ p {
 }
 
 .hello__text {
-    max-width: 70%;
+    max-width: 75%;
     padding: 0 45px;
     margin-top: 25px;
 
@@ -225,7 +225,7 @@ p {
 }
 
 .hello__img {
-    max-width: 30%;
+    max-width: 25%;
     height: auto;
 
     border-radius: 100%;
@@ -550,6 +550,7 @@ p {
     }
 
     .hello__img {
+        min-width: 200px;
         height: auto;
     }
 
