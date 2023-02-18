@@ -225,8 +225,8 @@ p {
 }
 
 .hello__img {
-    max-width: 25%;
-    height: auto;
+    width: auto;
+    max-height: 300px;
 
     border-radius: 100%;
 }
@@ -550,8 +550,8 @@ p {
     }
 
     .hello__img {
-        min-width: 200px;
-        height: auto;
+        
+
     }
 
     .btn {
