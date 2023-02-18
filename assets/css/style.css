@@ -210,17 +210,25 @@ p {
 /* Hello */
 .hello {
     display: flex;
+    flex-direction: row-reverse;
     
     align-items: center;
 }
 
 .hello__text {
-    width: 70%;
+    max-width: 70%;
     padding: 0 45px;
     margin-top: 25px;
 
     font-size: 24px;
     line-height: 1.7;
+}
+
+.hello__img {
+    max-width: 30%;
+    height: auto;
+
+    border-radius: 100%;
 }
 
 /* Frature */
@@ -526,6 +534,22 @@ p {
 
     /* Intro */
     .intro {
+        height: auto;
+    }
+
+    /* Hello */
+    .hello {
+        flex-direction: column;
+    }
+
+    .hello__text {
+        max-width: 100%;
+        text-align: center;
+
+        font-size: 20px;
+    }
+
+    .hello__img {
         height: auto;
     }
 
