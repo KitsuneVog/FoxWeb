@@ -133,7 +133,7 @@ p {
     justify-content: center;
     height: 800px;
 	padding-top: 100px;
-    margin-bottom: 67px;
+    margin-bottom: 25px;
 
     background: #100931 url(../../images/intro.jpg) no-repeat center;
     background-size: cover;
@@ -663,6 +663,11 @@ p {
 }
 
 @media (max-width: 450px) {
+    /* Hello */
+    .hello__text {
+        font-size: 18px;
+    }
+    
     /* Header */
     .header__logo {
         font-size: 25px;
@@ -719,7 +724,7 @@ p {
     }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 310px) {  
     /* Header */
     .header__logo {
         font-size: 20px;

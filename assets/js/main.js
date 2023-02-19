@@ -19,7 +19,7 @@ $(function() {
 	});
 
 	function checkScroll(scrollPos, introH) {
-		if(scrollPos > introH) {
+		if(scrollPos > introH - 50) {
 			header.addClass("fixed");
 		} else {
 			header.removeClass("fixed");
