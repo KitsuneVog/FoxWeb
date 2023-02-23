@@ -51,7 +51,7 @@ $(function() {
 	IdClick.on("click", function(event){
 		event.preventDefault();
 
-		navigator.clipboard.writeText('Нету)');
+		navigator.clipboard.writeText('Тут пусто!');
 
 		let div = document.createElement('div');
 
@@ -62,21 +62,19 @@ $(function() {
 		setTimeout(() => div.remove(), 1500);
 	});
 
+	// Team: https://kenwheeler.github.io/slick/
+	let slider = $("#teamSlider");
 
+	slider.slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		arrows: false,
+		dots: true
+	});
 
 
 
 
 });
-
-function copyIP() {
-	navigator.clipboard.writeText('play.vibecraft.ru')
-
-	let div = document.createElement('div');
-
-    div.className = "alert";
-    div.innerHTML = "<b>ip-адрес скопирован!</b> Приятной игры.";
-	document.body.before(div);
-
-	setTimeout(() => div.remove(), 1500);
-  }

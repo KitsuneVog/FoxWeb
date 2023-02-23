@@ -292,6 +292,15 @@ p {
     background-color: #31294C;
 }
 
+.team__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.team__slider.slick-initialized {
+    height: auto;
+}
+
 .team__item {
     display: flex;
     flex-wrap: wrap;
@@ -334,6 +343,47 @@ p {
     font-style: italic;
     font-size: 27px;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots  .slick-active button {
+    opacity: 1;
 }
 
 /* Socila */
