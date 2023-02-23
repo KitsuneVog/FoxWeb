@@ -1,7 +1,12 @@
+@font-face {
+    font-family: minecraft;
+    src: url(../../fonts/minecraft.ttf);
+}
+
 body {
     margin: 0;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'minecraft', sans-serif;
     font-size: 14px;
     color: #6c7279;
     -webkit-font-smoothing: antialiased;
@@ -35,6 +40,7 @@ p {
     text-align: center;
     margin: 15px;
 
+    font-family: Montserrat;
     font-size: 45px;
     background: linear-gradient(90deg, #a84bb9, #3a4fee);
     -webkit-background-clip: text;
@@ -73,6 +79,7 @@ p {
 }
 
 .header__logo {
+    font-family: sans-serif;
     font-size: 40px;
     color: #FFF;
     font-weight: 700;
@@ -160,8 +167,8 @@ p {
 .intro__title {
     margin-bottom: 30px;
 
-    font-family: 'Open Sans', sans-serif;
-    font-size: 120px;
+    font-family: 'minecraft', sans-serif;
+    font-size: 110px;
     line-height: 1.1;
     color: #fff;
     font-weight: 700;
@@ -190,8 +197,8 @@ p {
     cursor: pointer;
 
 
-    font-family: inherit;
-	font-size: 30px;
+    font-family: minecraft;
+	font-size: 27px;
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
@@ -261,6 +268,7 @@ p {
 .feature__title {
     margin-bottom: 20px;
 
+    font-family: sans-serif;
     font-size: 22px;
     color: #2d3033;
     font-weight: 700;
