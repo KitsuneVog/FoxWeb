@@ -14,6 +14,7 @@
     <title>VibeCraft - Дружный | ванильный | позитивный</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
     
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
@@ -52,8 +53,8 @@
             <nav class="nav" id="nav">
                 <a class="nav__link" href="#" data-scroll="#server">О сервере</a>
                 <a class="nav__link" href="#" data-scroll="#feature">Правила</a>
-                <a class="nav__link" href="#" data-scroll="#dynmap">Карта мира</a>
-                <a class="nav__link" href="#" data-scroll="#footer">Связь</a>
+                <!-- <a class="nav__link" href="#" data-scroll="#dynmap">Карта мира</a> -->
+                <a class="nav__link" href="#" data-scroll="#social">Связь</a>
                 <a class="nav__link" href="#" data-scroll="#intro">Играть</a>
             </nav>
 
@@ -142,11 +143,19 @@
 </div><!--/.container-->
 
 <!-- Dynmap -->
-<div class="container" id="dynmap">
+<!-- <div class="container" id="dynmap">
     <h3 class="chapter__title">Карта мира</h3>
-    <div class="dynmap">
-        <iframe class="dynmap__map" src=""></iframe>
-    </div>
+    <iframe class="dynmap" src=""></iframe>
+</div> -->
+
+<!-- WidgetBot: https://widgetbot.io -->
+<div class="container" id="social">
+    <h3 class="chapter__title">Дискорд сервер</h3>
+
+    <widgetbot class="widgetbot"
+        server="857274213417484321"
+        channel="857278726232211456"
+    ></widgetbot>
 </div>
 
 <!-- Team -->

@@ -283,12 +283,17 @@ p {
 
 /* Dynmap */
 .dynmap {
-    display: block;
-}
-
-.dynmap__map {
     width: 100%;
     height: 88vh;
+    margin-bottom: 60px;
+
+    border: 1px solid #000;
+}
+
+/* WidgetBot */
+.widgetbot {
+    width: 100%;
+    height: 85vh;
     margin-bottom: 60px;
 
     border: 1px solid #000;
@@ -565,6 +570,11 @@ p {
     .dynmap {
         padding: 0 25px;
     }
+
+    /* widgetbot */
+    .widgetbot {
+        padding: 0 25px;
+    }
 }
 
 
@@ -779,6 +789,11 @@ p {
         font-size: 15px;
     }
 
+    /*  */
+    .chapter__title {
+        font-size: 35px;
+    }
+
     /* Team */
     .team__photo {
         width: 100%;
@@ -850,6 +865,20 @@ p {
     .btn {
         margin-bottom: 40px;
         font-size: 10px;
+    }
+
+    /* Hello */
+    .hello__text {
+        font-size: 16px;
+    }
+
+    /* Feature */
+    .feature__title {
+        font-size: 18px;
+    }
+
+    .feature__text {
+        font-size: 16px;
     }
 }
 
