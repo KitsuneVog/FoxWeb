@@ -51,7 +51,7 @@ $(function() {
 	IdClick.on("click", function(event){
 		event.preventDefault();
 
-		navigator.clipboard.writeText('Тут пусто!');
+		navigator.clipboard.writeText('vibecraft.mclan.ru');
 
 		let div = document.createElement('div');
 
